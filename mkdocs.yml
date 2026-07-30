@@ -1,14 +1,14 @@
-site_name: Malbec Labs
+site_name: DoubleZero
 site_url: https://docs.malbeclabs.com/
 site_description: >-
-  Documentation for connecting to and operating on the Malbec Labs / DoubleZero
+  Documentation for connecting to and operating on the DoubleZero
   network — validator and tenant setup, multicast, rewards, geolocation, and
   contributor operations.
 theme:
   name: material
   custom_dir: overrides
   logo: logo.svg
-  favicon: favicon.svg
+  favicon: dz-favicon-v4.png
   # Language selector icon (sized to match theme/search controls)
   icon:
     alternate: material/translate
@@ -26,9 +26,8 @@ theme:
       toggle:
         icon: material/weather-sunny
         name: Switch to dark mode
-  font:
-    text: Roboto
-    code: Roboto Mono
+  # Self-hosted Reckless + Suisse Intl (DoubleZero brand kit) via extra.css
+  font: false
   features:
     - content.code.copy
     - navigation.indexes

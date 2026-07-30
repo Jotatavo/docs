@@ -1,108 +1,238 @@
-/* Readability first; brand accents second (Malbec kit).
-   Dark canvas: soft charcoal (not pure navy/black).
-   Type: Roboto for long-form reading. Brand: cerulean links/accents.
+/* DoubleZero brand identity (Media Kit 2026 + doublezero.xyz).
+   Display: Reckless · Body: Suisse Intl · Mono: Suisse Intl Mono
+   Palette: black/white primary; spectrum accents only as thin fiber edges.
 */
+@font-face {
+  font-family: "Reckless";
+  src: url("../fonts/RecklessStandardM-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Reckless";
+  src: url("../fonts/RecklessStandardM-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Reckless";
+  src: url("../fonts/RecklessStandardM-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Reckless";
+  src: url("../fonts/RecklessStandardM-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Suisse Intl";
+  src: url("../fonts/SuisseIntl-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Suisse Intl";
+  src: url("../fonts/SuisseIntl-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Suisse Intl";
+  src: url("../fonts/SuisseIntl-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Suisse Intl";
+  src: url("../fonts/SuisseIntl-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Suisse Intl";
+  src: url("../fonts/SuisseIntl-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Suisse Intl Mono";
+  src: url("../fonts/SuisseIntl-Mono.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
-  --dz-cerulean: #16B5F4;
-  --dz-cerulean-readable: #3bbef0; /* slightly brighter for dark surfaces */
-  --dz-web-blue: #0919D8;
-  --dz-black: #000000;
-  --dz-white: #ffffff;
-  /* Soft charcoal — easier on eyes than #0a0c12 */
-  --dz-surface: #1a1d24;
-  --dz-surface-raised: #22262f;
-  --dz-surface-code: #2a2f3a;
-  --dz-text: #d8dce3;
-  --dz-text-strong: #eef1f6;
-  --dz-text-muted: #a7adb8;
+  /* doublezero.xyz + logo spectrum */
+  --dz-black: #08090a;
+  --dz-white: #fafafa;
+  --dz-grey: #62666d;
+  --dz-grey-light: #e2e2e2;
+  --dz-green: #21b906;
+  --dz-green-soft: color-mix(in srgb, #21b906 10%, #fafafa);
+  --dz-teal: #07c8c9;
+  --dz-blue: #1b63ff;
+  --dz-yellow: #ffdc78;
+  --dz-red: #d92308;
+  --dz-orange: #ff5a1f;
+  --dz-fiber: linear-gradient(
+    90deg,
+    var(--dz-teal) 0%,
+    var(--dz-blue) 28%,
+    #9b7bff 48%,
+    var(--dz-yellow) 68%,
+    var(--dz-orange) 85%,
+    var(--dz-red) 100%
+  );
+  --dz-font-display: "Reckless", "Times New Roman", Georgia, serif;
+  --dz-font-body: "Suisse Intl", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --dz-font-mono: "Suisse Intl Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --dz-surface: #08090a;
+  --dz-surface-raised: #121314;
+  --dz-surface-code: #18191b;
+  --dz-text: #e2e2e2;
+  --dz-text-strong: #fafafa;
+  --dz-text-muted: #62666d;
+  --md-text-font: "Suisse Intl";
+  --md-code-font: "Suisse Intl Mono";
 }
 
 :root > * {
-  --md-accent-fg-color: var(--dz-cerulean);
-  --md-accent-fg-color--transparent: color-mix(in srgb, var(--dz-cerulean) 12%, transparent);
-  --md-typeset-a-color: var(--dz-cerulean);
+  --md-accent-fg-color: var(--dz-grey-light);
+  --md-accent-fg-color--transparent: color-mix(in srgb, var(--dz-grey-light) 12%, transparent);
+  --md-typeset-a-color: var(--dz-grey-light);
 }
 
-/* Light mode: soft paper (not pure white glare) + dark text */
+/* Light mode: clean paper + dark type */
 [data-md-color-scheme="default"] {
-  --md-default-bg-color: #f6f7f9;
-  --md-default-bg-color--light: #f6f7f9;
-  --md-default-bg-color--lighter: #eef0f4;
-  --md-default-bg-color--lightest: #e2e5eb;
-  --md-default-fg-color: rgba(20, 24, 32, 0.92);
-  --md-default-fg-color--light: rgba(20, 24, 32, 0.72);
-  --md-default-fg-color--lighter: rgba(20, 24, 32, 0.54);
-  --md-default-fg-color--lightest: rgba(20, 24, 32, 0.14);
-  --md-typeset-color: rgba(20, 24, 32, 0.88);
-  --md-typeset-a-color: #0b8fc4; /* darker cerulean for contrast on light */
-  --md-code-bg-color: #e8ebf0;
-  --md-code-fg-color: #1a1d24;
-  --md-primary-fg-color: #1a1d24;
-  --md-primary-bg-color: #f6f7f9;
+  --md-default-bg-color: #fafafa;
+  --md-default-bg-color--light: #fafafa;
+  --md-default-bg-color--lighter: #f0f0f0;
+  --md-default-bg-color--lightest: #e2e2e2;
+  --md-default-fg-color: rgba(8, 9, 10, 0.92);
+  --md-default-fg-color--light: rgba(8, 9, 10, 0.72);
+  --md-default-fg-color--lighter: rgba(8, 9, 10, 0.54);
+  --md-default-fg-color--lightest: rgba(8, 9, 10, 0.14);
+  --md-typeset-color: rgba(8, 9, 10, 0.9);
+  --md-typeset-a-color: #08090a;
+  --md-code-bg-color: #efefef;
+  --md-code-fg-color: #08090a;
+  --md-primary-fg-color: #08090a;
+  --md-primary-bg-color: #fafafa;
+  --md-accent-fg-color: #08090a;
+  --dz-green-soft: color-mix(in srgb, #21b906 8%, #fafafa);
 }
 
-/* Dark mode: Material-like charcoal — brand only as accent */
+/* Dark mode: DoubleZero black canvas */
 [data-md-color-scheme="slate"] {
   --md-default-bg-color: var(--dz-surface);
-  --md-default-bg-color--light: #1e222a;
+  --md-default-bg-color--light: #0c0d0e;
   --md-default-bg-color--lighter: var(--dz-surface-raised);
-  --md-default-bg-color--lightest: #2e3440;
+  --md-default-bg-color--lightest: #222426;
   --md-default-fg-color: var(--dz-text-strong);
-  --md-default-fg-color--light: var(--dz-text-muted);
-  --md-default-fg-color--lighter: #8b929e;
+  --md-default-fg-color--light: var(--dz-grey-light);
+  --md-default-fg-color--lighter: var(--dz-grey);
   --md-default-fg-color--lightest: rgba(255, 255, 255, 0.12);
   --md-typeset-color: var(--dz-text);
-  --md-typeset-a-color: var(--dz-cerulean-readable);
+  --md-typeset-a-color: var(--dz-grey-light);
   --md-code-bg-color: var(--dz-surface-code);
-  --md-code-fg-color: #e4e8ef;
-  --md-footer-bg-color: #15181e;
-  --md-footer-bg-color--dark: #12151a;
-  --md-accent-fg-color: var(--dz-cerulean-readable);
+  --md-code-fg-color: #f0f0f0;
+  --md-footer-bg-color: #000000;
+  --md-footer-bg-color--dark: #000000;
+  --md-accent-fg-color: var(--dz-white);
+  --dz-green-soft: color-mix(in srgb, #21b906 14%, #08090a);
 }
 
-/* Long-form reading comfort */
+body {
+  font-family: var(--dz-font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+code,
+pre,
+.md-typeset code,
+.md-typeset pre,
+.md-code__content,
+.dz-btn-rect,
+.runbook-assist-btn {
+  font-family: var(--dz-font-mono);
+}
+
+/* Suisse body · Reckless headings only */
 .md-typeset {
-  font-size: 0.78rem;
-  line-height: 1.7;
+  font-size: 0.84rem;
+  line-height: 1.75;
+  font-family: var(--dz-font-body);
+  font-weight: 400;
+  color: var(--md-typeset-color);
+}
+
+.md-typeset p,
+.md-typeset li,
+.md-typeset td,
+.md-typeset th {
+  font-family: var(--dz-font-body);
 }
 
 .md-typeset h1,
 .md-typeset h2,
 .md-typeset h3,
 .md-typeset h4 {
-  font-family: var(--md-text-font, Roboto), system-ui, sans-serif;
-  letter-spacing: -0.01em;
-  line-height: 1.3;
+  font-family: var(--dz-font-display);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
   color: var(--md-default-fg-color);
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .md-typeset > h1 {
-  font-size: 1.65em;
-  font-weight: 700;
-  margin-bottom: 0.85em;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 0.75em;
 }
 
 .md-typeset h2 {
-  font-weight: 600;
-  margin-top: 1.6em;
+  font-weight: 500;
+  margin-top: 1.75em;
+  padding-bottom: 0.35em;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
 }
 
-/* Header: same charcoal family as page; thin brand edge only */
+/* Header: pure black/white — thin spectrum fiber at the bottom edge */
 .md-header {
   background:
-    linear-gradient(var(--dz-cerulean), var(--dz-cerulean)) top / 100% 2px no-repeat,
-    var(--dz-surface);
-  color: var(--dz-text-strong);
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+    var(--dz-fiber) bottom / 100% 1px no-repeat,
+    #000000;
+  color: var(--dz-white);
+  box-shadow: none;
 }
 
 [data-md-color-scheme="default"] .md-header {
   background:
-    linear-gradient(var(--dz-cerulean), var(--dz-cerulean)) top / 100% 2px no-repeat,
-    #ffffff;
-  color: #1a1d24;
-  box-shadow: 0 1px 0 rgba(20, 24, 32, 0.08);
+    var(--dz-fiber) bottom / 100% 1px no-repeat,
+    var(--dz-white);
+  color: var(--dz-black);
+  box-shadow: none;
 }
 
 .md-header .md-header__button,
@@ -115,51 +245,256 @@
 [data-md-color-scheme="slate"] .md-header .md-header__button:hover,
 [data-md-color-scheme="slate"] .md-header .md-header__button:focus {
   opacity: 1;
-  color: var(--dz-cerulean-readable);
+  color: var(--dz-white);
 }
 
 [data-md-color-scheme="default"] .md-header .md-header__button:hover,
 [data-md-color-scheme="default"] .md-header .md-header__button:focus {
   opacity: 1;
-  color: #0b8fc4;
+  color: var(--dz-black);
 }
 
-/* Links + nav accents (brand, quieter than body) */
+/* Links + nav accents */
 .md-typeset a {
   color: var(--md-typeset-a-color);
+  text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.18em;
   transition: color 0.15s ease, text-decoration-color 0.15s ease;
 }
 
 .md-typeset a:hover {
-  color: color-mix(in srgb, var(--md-typeset-a-color) 75%, var(--dz-web-blue));
+  color: var(--dz-orange);
+}
+
+[data-md-color-scheme="default"] .md-typeset a:hover {
+  color: var(--dz-orange);
 }
 
 .md-nav__link:hover,
 .md-nav__link:focus,
 .md-nav__item .md-nav__link--active,
 .md-nav__link--active {
-  color: var(--md-typeset-a-color);
+  color: var(--md-default-fg-color);
 }
 
 .md-nav__link--active {
-  transition: color 0.18s ease;
+  transition: color 0.15s ease;
 }
 
+/* Orange square bullets (brand lists) */
+.md-typeset ul:not(.task-list):not(.md-nav__list) {
+  list-style: none;
+  padding-left: 0;
+}
+
+.md-typeset ul:not(.task-list):not(.md-nav__list) > li {
+  position: relative;
+  padding-left: 1.15em;
+  margin-left: 0.15em;
+}
+
+.md-typeset ul:not(.task-list):not(.md-nav__list) > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 0.38em;
+  height: 0.38em;
+  background: var(--dz-orange);
+}
+
+/* Admonitions: sharp thin rectangles */
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 0 !important;
+  border-width: 1px !important;
+  box-shadow: none !important;
+}
+
+/* Informational cards (info / note / tip) — brand green */
+.md-typeset .admonition.info,
+.md-typeset details.info,
 .md-typeset .admonition.note,
-.md-typeset details.note {
-  border-color: var(--dz-cerulean);
+.md-typeset details.note,
+.md-typeset .admonition.tip,
+.md-typeset details.tip {
+  border-color: var(--dz-green);
 }
 
+.md-typeset .info > .admonition-title,
+.md-typeset .info > summary,
 .md-typeset .note > .admonition-title,
-.md-typeset .note > summary {
-  background-color: color-mix(in srgb, var(--dz-cerulean) 12%, transparent);
+.md-typeset .note > summary,
+.md-typeset .tip > .admonition-title,
+.md-typeset .tip > summary {
+  background-color: var(--dz-green-soft);
+  border-radius: 0;
+  color: var(--md-default-fg-color);
 }
 
+.md-typeset .info > .admonition-title::before,
+.md-typeset .info > summary::before,
 .md-typeset .note > .admonition-title::before,
-.md-typeset .note > summary::before {
-  background-color: var(--dz-cerulean);
+.md-typeset .note > summary::before,
+.md-typeset .tip > .admonition-title::before,
+.md-typeset .tip > summary::before {
+  background-color: var(--dz-green);
+}
+
+.md-typeset .admonition.warning,
+.md-typeset details.warning {
+  border-color: var(--dz-orange);
+}
+
+.md-typeset .warning > .admonition-title,
+.md-typeset .warning > summary {
+  background-color: color-mix(in srgb, var(--dz-orange) 10%, transparent);
+}
+
+.md-typeset .warning > .admonition-title::before,
+.md-typeset .warning > summary::before {
+  background-color: var(--dz-orange);
+}
+
+/* Green pill badge (brand) */
+.dz-badge-green {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.85rem;
+  border: 1px solid var(--dz-green);
+  border-radius: 999px;
+  background: var(--dz-green-soft);
+  color: var(--dz-green);
+  font-family: var(--dz-font-mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  line-height: 1;
+}
+
+.dz-badge-green::before {
+  content: "";
+  width: 0.4em;
+  height: 0.4em;
+  background: var(--dz-green);
+  flex-shrink: 0;
+}
+
+/* Rainbow text — hover only (CTAs + side nav) */
+.dz-cta-rainbow,
+a.dz-cta-rainbow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--md-default-fg-color) !important;
+  -webkit-text-fill-color: var(--md-default-fg-color);
+  background: none;
+  font-family: var(--dz-font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  text-decoration: none !important;
+  line-height: 1.3;
+  transition: opacity 0.15s ease;
+}
+
+.dz-cta-rainbow::after {
+  content: "→";
+  color: var(--md-default-fg-color);
+  -webkit-text-fill-color: var(--md-default-fg-color);
+  font-weight: 400;
+}
+
+.dz-cta-rainbow:hover,
+.dz-cta-rainbow:focus-visible,
+a.dz-cta-rainbow:hover,
+a.dz-cta-rainbow:focus-visible {
+  background-image: var(--dz-fiber);
+  background-size: 100% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent;
+}
+
+.dz-cta-rainbow:hover::after,
+.dz-cta-rainbow:focus-visible::after {
+  background: none;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  color: var(--md-default-fg-color);
+  -webkit-text-fill-color: var(--md-default-fg-color);
+}
+
+/* Shared rainbow hover for left + right menus
+   (Material puts label text in .md-ellipsis — clip must hit that node too) */
+.md-sidebar--primary .md-nav__link:hover,
+.md-sidebar--primary .md-nav__link:focus-visible,
+.md-sidebar--secondary .md-nav__link:hover,
+.md-sidebar--secondary .md-nav__link:focus-visible,
+.md-sidebar--secondary .toc-page-top:hover,
+.md-sidebar--secondary .toc-page-top:focus-visible {
+  background-color: transparent !important;
+  text-shadow: none !important;
+}
+
+.md-sidebar--primary .md-nav__link:hover .md-nav__icon,
+.md-sidebar--primary .md-nav__link:focus-visible .md-nav__icon,
+.md-sidebar--primary .md-nav__link:hover svg,
+.md-sidebar--primary .md-nav__link:focus-visible svg,
+.md-sidebar--secondary .md-nav__link:hover .md-nav__icon,
+.md-sidebar--secondary .md-nav__link:focus-visible .md-nav__icon,
+.md-sidebar--secondary .md-nav__link:hover svg,
+.md-sidebar--secondary .md-nav__link:focus-visible svg {
+  color: var(--md-default-fg-color) !important;
+  fill: var(--md-default-fg-color) !important;
+  -webkit-text-fill-color: var(--md-default-fg-color) !important;
+  background: none !important;
+  -webkit-background-clip: border-box !important;
+  background-clip: border-box !important;
+}
+
+/* Sharp mono rectangle buttons */
+.dz-btn-rect,
+.md-typeset .md-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.55rem 0.95rem;
+  border: 1px solid var(--md-default-fg-color) !important;
+  border-radius: 0 !important;
+  background: var(--md-default-fg-color);
+  color: var(--md-default-bg-color) !important;
+  font-family: var(--dz-font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-decoration: none !important;
+  line-height: 1.2;
+  box-shadow: none !important;
+}
+
+.dz-btn-rect:hover,
+.md-typeset .md-button:hover {
+  background: transparent;
+  color: var(--md-default-fg-color) !important;
+}
+
+.dz-btn-rect--ghost,
+.md-typeset .md-button--primary {
+  background: transparent;
+  color: var(--md-default-fg-color) !important;
+}
+
+.dz-btn-rect--ghost:hover,
+.md-typeset .md-button--primary:hover {
+  background: var(--md-default-fg-color);
+  color: var(--md-default-bg-color) !important;
 }
 
 /* Wider layout: push sidebars toward the viewport edges and give content more room */
@@ -276,14 +611,16 @@
   height: 2.1rem;
   margin: 0.15rem 0.35rem;
   padding: 0 0.85rem !important;
-  border: 1.5px solid color-mix(in srgb, var(--dz-cerulean) 65%, transparent);
-  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--dz-white) 45%, transparent);
+  border-radius: 0;
   background: transparent;
   color: var(--dz-white) !important;
   opacity: 1 !important;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
+  font-family: var(--dz-font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   text-decoration: none !important;
   line-height: 1;
   transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
@@ -291,23 +628,23 @@
 
 .header-support-btn:hover,
 .header-support-btn:focus {
-  color: var(--dz-white) !important;
+  color: var(--dz-black) !important;
   opacity: 1 !important;
-  background-color: color-mix(in srgb, var(--dz-cerulean) 22%, transparent);
-  border-color: var(--dz-cerulean);
+  background-color: var(--dz-white);
+  border-color: var(--dz-white);
   outline: none !important;
 }
 
 [data-md-color-scheme="default"] .header-support-btn {
-  color: var(--dz-web-blue) !important;
-  border-color: color-mix(in srgb, var(--dz-web-blue) 45%, transparent);
+  color: var(--dz-black) !important;
+  border-color: color-mix(in srgb, var(--dz-black) 35%, transparent);
 }
 
 [data-md-color-scheme="default"] .header-support-btn:hover,
 [data-md-color-scheme="default"] .header-support-btn:focus {
-  color: var(--dz-web-blue) !important;
-  background-color: color-mix(in srgb, var(--dz-cerulean) 18%, transparent);
-  border-color: var(--dz-cerulean);
+  color: var(--dz-white) !important;
+  background-color: var(--dz-black);
+  border-color: var(--dz-black);
 }
 
 /* Language selector: match icon size to theme/search; polish dropdown */
@@ -390,14 +727,14 @@
 
 .md-select__link:hover,
 .md-select__link:focus {
-  background-color: color-mix(in srgb, var(--md-accent-fg-color, #16B5F4) 14%, transparent);
-  color: var(--md-accent-fg-color, #16B5F4);
+  background-color: color-mix(in srgb, var(--md-accent-fg-color) 14%, transparent);
+  color: var(--md-accent-fg-color);
 }
 
 .md-select__link.is-active {
-  color: var(--md-accent-fg-color, #16B5F4);
+  color: var(--md-accent-fg-color);
   font-weight: 600;
-  background-color: color-mix(in srgb, var(--md-accent-fg-color, #16B5F4) 10%, transparent);
+  background-color: color-mix(in srgb, var(--md-accent-fg-color) 10%, transparent);
   padding-inline-end: 1.35rem;
 }
 
@@ -442,19 +779,22 @@
   align-items: center;
   gap: 0.375rem;
   color: var(--md-default-fg-color);
+  -webkit-text-fill-color: var(--md-default-fg-color);
   text-decoration: none;
   cursor: pointer;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.15s ease;
 }
 
 .page-toolbar-link:hover {
-  text-decoration: underline;
-  opacity: 0.8;
+  text-decoration: none;
+  opacity: 1;
 }
 
 .page-toolbar-link.copied {
-  color: var(--md-default-fg-color);
+  color: var(--dz-green);
+  -webkit-text-fill-color: var(--dz-green);
   font-weight: 500;
+  background-image: none !important;
 }
 
 .page-toolbar-icon {
@@ -480,33 +820,41 @@
   }
 }
 
-/* Runbook assist — quiet compact strip (no admonition chrome / border) */
+/* Runbook assist — copy left, actions right on one row */
 .runbook-assist--compact {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
-  gap: 0.55rem 0.85rem;
-  margin: 0.35rem 0 1rem;
-  padding: 0.55rem 0.75rem;
+  gap: 0.65rem 1rem;
+  margin: 0.25rem 0 1.15rem;
+  padding: 0.7rem 0;
   border: none;
-  border-radius: 0.4rem;
-  background: color-mix(in srgb, var(--md-accent-fg-color, #16B5F4) 10%, transparent);
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0;
+  background: transparent;
+}
+
+.runbook-assist--compact .runbook-assist-mark {
+  flex: 0 0 auto;
+  width: 0.45rem;
+  height: 0.45rem;
+  background: var(--dz-green);
+  align-self: center;
 }
 
 .runbook-assist--compact .runbook-assist-icon {
-  flex: 0 0 auto;
-  width: 1.15rem;
-  height: 1.15rem;
-  color: var(--md-accent-fg-color, #16B5F4);
+  display: none;
 }
 
 .runbook-assist--compact .runbook-assist-copy {
-  flex: 1 1 12rem;
+  flex: 1 1 auto;
   margin: 0 !important;
   padding: 0 !important;
-  font-size: 0.78rem;
-  line-height: 1.4;
+  font-size: 0.8rem;
+  line-height: 1.45;
   color: var(--md-default-fg-color--light);
+  font-family: var(--dz-font-body);
+  min-width: 0;
 }
 
 .runbook-assist--compact .runbook-assist-copy strong {
@@ -516,45 +864,115 @@
 
 .runbook-assist--compact .runbook-assist-actions {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin: 0 !important;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0.65rem 0.85rem;
+  margin: 0 0 0 auto !important;
   padding: 0 !important;
+  flex: 0 0 auto;
 }
 
 .runbook-assist-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.32rem 0.65rem;
-  border-radius: 0.25rem;
-  border: 1px solid var(--md-accent-fg-color, #16B5F4);
-  background: var(--md-accent-fg-color, #16B5F4);
-  color: #0b0b0b !important;
-  font-size: 0.72rem;
-  font-weight: 600;
+  padding: 0.5rem 0.85rem;
+  border-radius: 0;
+  border: 1px solid var(--md-default-fg-color);
+  background: var(--md-default-fg-color);
+  color: var(--md-default-bg-color) !important;
+  font-family: var(--dz-font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
   text-decoration: none !important;
   cursor: pointer;
   line-height: 1.2;
+  white-space: nowrap;
 }
 
 .runbook-assist-btn:hover {
-  opacity: 0.9;
+  background: transparent;
+  color: var(--md-default-fg-color) !important;
 }
 
 .runbook-assist-btn.copied {
-  background: #2e7d32;
-  border-color: #2e7d32;
+  background: var(--dz-green);
+  border-color: var(--dz-green);
   color: #fff !important;
+}
+
+/* Open runbook: always looks like a link; rainbow on hover */
+a.runbook-assist-btn.dz-cta-rainbow {
+  padding: 0;
+  border: none;
+  background: none;
+  background-image: none;
+  color: var(--dz-green) !important;
+  -webkit-text-fill-color: var(--dz-green);
+  text-decoration: underline !important;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+}
+
+a.runbook-assist-btn.dz-cta-rainbow:hover,
+a.runbook-assist-btn.dz-cta-rainbow:focus-visible {
+  background-image: var(--dz-fiber);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent;
+  text-decoration-color: color-mix(in srgb, var(--dz-teal) 70%, var(--dz-orange));
+  opacity: 1;
+}
+
+a.runbook-assist-btn.dz-cta-rainbow::after {
+  content: "→";
+  margin-left: 0.35rem;
+  background: none;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  color: var(--dz-green);
+  -webkit-text-fill-color: var(--dz-green);
+  text-decoration: none;
+}
+
+a.runbook-assist-btn.dz-cta-rainbow:hover::after,
+a.runbook-assist-btn.dz-cta-rainbow:focus-visible::after {
+  color: var(--md-default-fg-color);
+  -webkit-text-fill-color: var(--md-default-fg-color);
 }
 
 .runbook-assist-btn-secondary {
   background: transparent;
-  color: var(--md-accent-fg-color, #16B5F4) !important;
+  color: var(--md-default-fg-color) !important;
+}
+
+.runbook-assist-btn-secondary:hover {
+  background: var(--md-default-fg-color);
+  color: var(--md-default-bg-color) !important;
 }
 
 button.runbook-assist-btn {
-  font-family: inherit;
+  font-family: var(--dz-font-mono);
+}
+
+/* Narrow: stack copy, keep actions on one row aligned end */
+@media screen and (max-width: 40em) {
+  .runbook-assist--compact {
+    flex-wrap: wrap;
+  }
+
+  .runbook-assist--compact .runbook-assist-copy {
+    flex: 1 1 calc(100% - 1.5rem);
+  }
+
+  .runbook-assist--compact .runbook-assist-actions {
+    flex: 1 1 100%;
+    justify-content: flex-end;
+    margin-left: 0 !important;
+    padding-left: 1.1rem !important;
+  }
 }
 
 /* Legacy full admonition assist (if any remain) */
@@ -572,7 +990,7 @@ button.runbook-assist-btn {
   margin-right: 0;
 }
 
-/* Header: DoubleZero icon + Malbec wordmark (swap dark/light by scheme) */
+/* Header: DoubleZero color icon + wordmark (swap dark/light by scheme) */
 .md-header__button.md-logo {
   display: inline-flex;
   align-items: center;
@@ -603,20 +1021,23 @@ button.runbook-assist-btn {
   width: auto;
 }
 
-/* Drawer: keep Malbec wordmark only (DZ icon stays in header) */
+/* Drawer: wordmark only (icon stays in header) */
 .md-nav__button.md-logo .header-logo-dz {
-  display: none;
-}
-
-.header-logo-malbec--light {
   display: none !important;
 }
 
-[data-md-color-scheme="default"] .header-logo-malbec--dark {
+.header-logo-dz--light,
+.header-logo-wordmark--light {
   display: none !important;
 }
 
-[data-md-color-scheme="default"] .header-logo-malbec--light {
+[data-md-color-scheme="default"] .header-logo-dz--dark,
+[data-md-color-scheme="default"] .header-logo-wordmark--dark {
+  display: none !important;
+}
+
+[data-md-color-scheme="default"] .header-logo-dz--light,
+[data-md-color-scheme="default"] .header-logo-wordmark--light {
   display: inline-block !important;
 }
 
@@ -657,12 +1078,6 @@ button.runbook-assist-btn {
   text-decoration: none;
 }
 
-.md-sidebar--secondary .toc-page-top:hover,
-.md-sidebar--secondary .toc-page-top:focus {
-  color: var(--md-accent-fg-color, #16B5F4);
-  text-decoration: none;
-}
-
 /* Scrollspy TOC — active section tracks as you scroll (Solana / Helius style) */
 .md-sidebar--secondary .md-nav--secondary > .md-nav__list {
   position: relative;
@@ -690,37 +1105,52 @@ button.runbook-assist-btn {
 
 .md-sidebar--secondary .md-nav--secondary .md-nav__link:hover,
 .md-sidebar--secondary .md-nav--secondary .md-nav__link:focus {
-  color: var(--md-default-fg-color);
-  background: transparent;
+  background-color: transparent;
   font-weight: 400;
-  /* Faux-bold: looks heavier without changing glyph metrics / layout */
-  text-shadow: 0.35px 0 0 currentColor, -0.35px 0 0 currentColor;
 }
 
-/* Active: color + rail + faux-bold — no font-weight change (no layout shift) */
+/* Active: color + rail — no layout shift; rainbow only on hover (above) */
 .md-sidebar--secondary .md-nav--secondary .md-nav__link--active,
 .md-sidebar--secondary .md-nav--secondary .md-nav__link--active:focus,
-.md-sidebar--secondary .md-nav--secondary .md-nav__link--active:hover,
 .md-sidebar--secondary .md-nav--secondary .md-nav__item--active > .md-nav__link {
-  color: var(--md-accent-fg-color, #16B5F4);
+  color: var(--md-default-fg-color);
+  -webkit-text-fill-color: var(--md-default-fg-color);
+  background-image: none;
   font-weight: 400 !important;
-  border-left-color: var(--md-accent-fg-color, #16B5F4);
-  background: transparent;
+  border-left-color: var(--md-default-fg-color);
+  background-color: transparent;
   text-shadow: 0.4px 0 0 currentColor, -0.4px 0 0 currentColor;
 }
 
-/* Primary nav: faux-bold on active/hover, stable metrics */
-.md-sidebar--primary .md-nav__link {
-  font-weight: 400 !important;
-  transition: color 0.15s ease, text-shadow 0.15s ease;
+.md-sidebar--secondary .md-nav--secondary .md-nav__link--active:hover,
+.md-sidebar--secondary .md-nav--secondary .md-nav__link--active:focus-visible {
+  background-image: var(--dz-fiber) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  text-shadow: none !important;
+  border-left-color: var(--dz-orange);
 }
 
-.md-sidebar--primary .md-nav__link:hover,
-.md-sidebar--primary .md-nav__link:focus,
+/* Primary nav: stable metrics; rainbow via shared hover rule above */
+.md-sidebar--primary .md-nav__link {
+  font-weight: 400 !important;
+  transition: color 0.15s ease;
+}
+
 .md-sidebar--primary .md-nav__link--active,
 .md-sidebar--primary .md-nav__item--active > .md-nav__link {
   font-weight: 400 !important;
   text-shadow: 0.35px 0 0 currentColor, -0.35px 0 0 currentColor;
+  color: var(--md-default-fg-color);
+}
+
+.md-sidebar--primary .md-nav__link--active:hover,
+.md-sidebar--primary .md-nav__link--active:focus-visible,
+.md-sidebar--primary .md-nav__item--active > .md-nav__link:hover,
+.md-sidebar--primary .md-nav__item--active > .md-nav__link:focus-visible {
+  text-shadow: none !important;
 }
 
 /* Nested TOC levels stay indented under the scrollspy rail */
@@ -1052,7 +1482,7 @@ html:has([data-md-toggle="search"]:checked) body {
     flex-shrink: 0;
   }
 
-  .md-header__button.md-logo .header-logo-malbec {
+  .md-header__button.md-logo .header-logo-wordmark {
     height: 0.95rem;
     max-width: min(8.75rem, calc(100vw - 6.25rem));
     object-fit: contain;
@@ -1061,7 +1491,7 @@ html:has([data-md-toggle="search"]:checked) body {
 }
 
 @media screen and (max-width: 22.5em) {
-  /* Keep DZ + Malbec; shrink further instead of dropping either mark */
+  /* Keep icon + wordmark; shrink further instead of dropping either mark */
   .md-header__button.md-logo {
     gap: 0.2rem;
   }
@@ -1071,7 +1501,7 @@ html:has([data-md-toggle="search"]:checked) body {
     height: 0.85rem;
   }
 
-  .md-header__button.md-logo .header-logo-malbec {
+  .md-header__button.md-logo .header-logo-wordmark {
     height: 0.85rem;
     max-width: calc(100vw - 5.75rem);
   }
@@ -1158,8 +1588,8 @@ html:has([data-md-toggle="search"]:checked) body {
 
   .mobile-drawer-controls__btn:hover,
   .mobile-drawer-controls__btn:focus {
-    border-color: var(--md-accent-fg-color, #16B5F4);
-    color: var(--md-accent-fg-color, #16B5F4);
+    border-color: var(--md-accent-fg-color);
+    color: var(--md-accent-fg-color);
   }
 
   .mobile-drawer-controls__label {
@@ -1195,8 +1625,8 @@ html:has([data-md-toggle="search"]:checked) body {
   .mobile-drawer-controls__langs a:hover,
   .mobile-drawer-controls__langs a.is-active,
   .mobile-drawer-controls__langs a[aria-current="page"] {
-    color: var(--md-accent-fg-color, #16B5F4);
-    border-color: color-mix(in srgb, var(--md-accent-fg-color, #16B5F4) 45%, transparent);
+    color: var(--md-accent-fg-color);
+    border-color: color-mix(in srgb, var(--md-accent-fg-color) 45%, transparent);
   }
 
   .mobile-drawer-controls__palette {
@@ -1216,4 +1646,68 @@ html:has([data-md-toggle="search"]:checked) body {
     border-radius: 50%;
     background-color: color-mix(in srgb, currentColor 14%, transparent);
   }
+}
+
+/* ─── Rainbow hover (final cascade) ─────────────────────────────────────────
+   Apply clip to the node that actually paints the glyphs (.md-ellipsis / link).
+   Also covers bottom page-toolbar links. */
+.dz-rainbow-hover:hover,
+.dz-rainbow-hover:focus-visible,
+.md-sidebar .md-nav__link:hover,
+.md-sidebar .md-nav__link:focus-visible,
+.md-sidebar .md-nav__link:hover .md-ellipsis,
+.md-sidebar .md-nav__link:focus-visible .md-ellipsis,
+.md-sidebar .toc-page-top:hover,
+.md-sidebar .toc-page-top:focus-visible,
+.md-sidebar .toc-page-top:hover .md-ellipsis,
+.md-sidebar .toc-page-top:focus-visible .md-ellipsis,
+.page-toolbar-link:hover,
+.page-toolbar-link:focus-visible,
+a.dz-cta-rainbow:hover,
+a.dz-cta-rainbow:focus-visible {
+  background-image: linear-gradient(
+    90deg,
+    #07c8c9 0%,
+    #1b63ff 28%,
+    #9b7bff 48%,
+    #ffdc78 68%,
+    #ff5a1f 85%,
+    #d92308 100%
+  ) !important;
+  background-size: 100% 100% !important;
+  background-repeat: no-repeat !important;
+  background-color: transparent !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  text-shadow: none !important;
+}
+
+/* Keep arrows / icons readable while text is rainbow-clipped */
+a.dz-cta-rainbow:hover::after,
+a.dz-cta-rainbow:focus-visible::after {
+  background: none !important;
+  -webkit-background-clip: border-box !important;
+  background-clip: border-box !important;
+  color: var(--md-default-fg-color) !important;
+  -webkit-text-fill-color: var(--md-default-fg-color) !important;
+}
+
+.page-toolbar-link:hover .page-toolbar-icon,
+.page-toolbar-link:focus-visible .page-toolbar-icon {
+  opacity: 1;
+  filter: none;
+}
+
+.md-sidebar .md-nav__link:hover .md-nav__icon,
+.md-sidebar .md-nav__link:focus-visible .md-nav__icon,
+.md-sidebar .md-nav__link:hover svg,
+.md-sidebar .md-nav__link:focus-visible svg {
+  color: var(--md-default-fg-color) !important;
+  fill: var(--md-default-fg-color) !important;
+  -webkit-text-fill-color: var(--md-default-fg-color) !important;
+  background: none !important;
+  -webkit-background-clip: border-box !important;
+  background-clip: border-box !important;
 }
