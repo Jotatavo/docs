@@ -1217,3 +1217,52 @@ html:has([data-md-toggle="search"]:checked) body {
     background-color: color-mix(in srgb, currentColor 14%, transparent);
   }
 }
+
+.dz-feedback-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 1rem;
+}
+.dz-feedback-modal {
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  width: 100%;
+  max-width: 32rem;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+.dz-feedback-title { margin: 0 0 0.25rem; font-size: 1.1rem; }
+.dz-feedback-context { margin: 0 0 1rem; color: var(--md-default-fg-color--light); font-size: 0.75rem; }
+.dz-feedback-lbl { display: block; margin: 0.75rem 0 0.25rem; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; color: var(--md-default-fg-color--light); }
+.dz-feedback-modal textarea,
+.dz-feedback-modal input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.35rem;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  font-family: inherit;
+  font-size: 0.8rem;
+  resize: vertical;
+}
+.dz-feedback-modal textarea:focus,
+.dz-feedback-modal input:focus { outline: none; border-color: var(--md-accent-fg-color, var(--md-primary-fg-color)); }
+.dz-feedback-invalid { border-color: #e5534b !important; }
+.dz-feedback-actions { display: flex; justify-content: flex-end; gap: 0.5rem; margin-top: 1.25rem; }
+.dz-feedback-actions button { padding: 0.45rem 1rem; border-radius: 0.35rem; border: none; cursor: pointer; font-size: 0.8rem; font-weight: 600; }
+.dz-feedback-cancel { background: transparent; color: var(--md-default-fg-color--light); }
+.dz-feedback-send { background: var(--md-accent-fg-color, var(--md-primary-fg-color)); color: #fff; }
+.dz-feedback-send:disabled { opacity: 0.6; cursor: default; }
+.dz-feedback-close { position: absolute; top: 0.6rem; right: 0.8rem; background: none; border: none; font-size: 1.4rem; line-height: 1; cursor: pointer; color: var(--md-default-fg-color--light); }
+.dz-feedback-result { margin-top: 1rem; padding: 0.6rem 0.75rem; border-radius: 0.35rem; font-size: 0.72rem; white-space: pre-wrap; font-family: var(--md-code-font-family, monospace); max-height: 14rem; overflow: auto; }
+.dz-feedback-result.ok  { background: rgba(46, 160, 67, 0.12); }
+.dz-feedback-result.err { background: rgba(229, 83, 75, 0.12); }
