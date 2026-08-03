@@ -127,6 +127,7 @@ extra_css:
 extra_javascript:
   - javascripts/cloudsmith-versions.js
   - javascripts/page-toolbar.js
+  - javascripts/feedback-widget.js
   - javascripts/runbook-assist.js
   - javascripts/nav-accordion.js
   - javascripts/toc-page-top.js
