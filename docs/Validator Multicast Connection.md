@@ -5,10 +5,9 @@ description: Configure a connected validator to publish leader shreds to the Dou
 # Validator Multicast Connection
 !!! warning "By connecting to DoubleZero I agree to the [DoubleZero Terms of Service](https://doublezero.xyz/terms-protocol)"
 
-!!! note inline end "Trading firms and businesses"
-    If you operate a trading firm or business looking to subscribe to the feed, more details will be shared soon. Please register interest to get more information [here](https://doublezero.xyz/edge-form).
-
 If you are not already connected to DoubleZero please complete [Setup](https://docs.malbeclabs.com/setup/), and [Mainnet-Beta](https://docs.malbeclabs.com/DZ%20Mainnet-beta%20Connection/) validator connection documentation.
+
+Trading firms and other subscribers: [Edge Subscriber Connection](Edge%20Subscriber%20Connection.md).
 
 If you are a validator who is already connected to DoubleZero you may continue this guide.
 

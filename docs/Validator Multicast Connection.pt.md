@@ -3,10 +3,9 @@
 
 !!! warning "Ao me conectar ao DoubleZero, concordo com os [Termos de Serviço do DoubleZero](https://doublezero.xyz/terms-protocol)"
 
-!!! note inline end "Empresas de trading e negócios"
-    Se você opera uma empresa de trading ou negócio que deseja se inscrever no feed, mais detalhes serão compartilhados em breve. Registre seu interesse para obter mais informações [aqui](https://doublezero.xyz/edge-form).
-
 Se você ainda não está conectado ao DoubleZero, complete a documentação de [Configuração](https://docs.malbeclabs.com/setup/) e de conexão de validador [Mainnet-Beta](https://docs.malbeclabs.com/DZ%20Mainnet-beta%20Connection/).
+
+Empresas de trading e outros assinantes: [Conexão do Assinante de Borda](Edge%20Subscriber%20Connection.md).
 
 Se você é um validador já conectado ao DoubleZero, pode continuar este guia.
 

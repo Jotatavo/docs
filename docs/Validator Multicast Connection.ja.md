@@ -3,10 +3,9 @@
 
 !!! warning "DoubleZeroに接続することで、[DoubleZero利用規約](https://doublezero.xyz/terms-protocol)に同意します"
 
-!!! note inline end "トレーディングファームおよびビジネス"
-    トレーディングファームやフィードへの購読を検討している企業の方は、詳細は近日中に共有される予定です。詳細については[こちら](https://doublezero.xyz/edge-form)からご登録ください。
-
 DoubleZeroにまだ接続していない場合は、[セットアップ](https://docs.malbeclabs.com/setup/)と[Mainnet-Beta](https://docs.malbeclabs.com/DZ%20Mainnet-beta%20Connection/)バリデーター接続ドキュメントを完了してください。
+
+トレーディングファームおよびその他のサブスクライバー：[エッジサブスクライバー接続](Edge%20Subscriber%20Connection.md)。
 
 DoubleZeroにすでに接続しているバリデーターの方は、このガイドを続けてください。
 

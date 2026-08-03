@@ -3,10 +3,9 @@
 
 !!! warning "通过连接到DoubleZero，我同意[DoubleZero服务条款](https://doublezero.xyz/terms-protocol)"
 
-!!! note inline end "交易公司和企业"
-    如果您经营交易公司或企业，希望订阅数据流，更多详情即将分享。请在[此处](https://doublezero.xyz/edge-form)注册以获取更多信息。
-
 如果您尚未连接到DoubleZero，请先完成[设置](https://docs.malbeclabs.com/setup/)和[主网Beta](https://docs.malbeclabs.com/DZ%20Mainnet-beta%20Connection/)验证器连接文档。
+
+交易公司及其他订阅者：[边缘订阅者连接](Edge%20Subscriber%20Connection.md)。
 
 如果您是已连接到DoubleZero的验证器，可以继续阅读本指南。
 

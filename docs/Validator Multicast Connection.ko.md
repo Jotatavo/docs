@@ -3,10 +3,9 @@
 
 !!! warning "DoubleZero에 연결함으로써 [DoubleZero 이용약관](https://doublezero.xyz/terms-protocol)에 동의합니다"
 
-!!! note inline end "거래 회사 및 기업"
-    피드를 구독하려는 거래 회사나 기업을 운영하시는 경우, 자세한 내용은 곧 공유될 예정입니다. 더 많은 정보를 얻으려면 [여기](https://doublezero.xyz/edge-form)에서 관심을 등록하세요.
-
 DoubleZero에 아직 연결되지 않은 경우 [설정](https://docs.malbeclabs.com/setup/) 및 [Mainnet-Beta](https://docs.malbeclabs.com/DZ%20Mainnet-beta%20Connection/) 검증자 연결 문서를 먼저 완료하세요.
+
+거래 회사 및 기타 구독자: [엣지 구독자 연결](Edge%20Subscriber%20Connection.md).
 
 이미 DoubleZero에 연결된 검증자라면 이 가이드를 계속 진행할 수 있습니다.
 
